@@ -7,10 +7,7 @@
 '     the code is regenerated.
 ' </auto-generated>
 '------------------------------------------------------------------------------
-
-
-
-Partial Public Class LoginPage
+Public Partial Class LoginPage
 
     ''' <summary>
     ''' Head1 control.

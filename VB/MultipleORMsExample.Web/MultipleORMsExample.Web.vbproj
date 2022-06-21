@@ -2,6 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
@@ -9,6 +10,7 @@
     <ProjectGuid>{FFC37866-0D2B-4154-ADB9-1EA9E1B0DB0A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>
     </RootNamespace>
     <AssemblyName>MultipleORMsExample.Web</AssemblyName>
@@ -19,10 +21,6 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <UseIISExpress>false</UseIISExpress>
-    <OptionExplicit>On</OptionExplicit>
-    <OptionCompare>Binary</OptionCompare>
-    <OptionStrict>Off</OptionStrict>
-    <OptionInfer>On</OptionInfer>
     <TargetFrameworkProfile />
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -36,26 +34,24 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\</OutputPath>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <DefineConstants>EASYTEST=True</DefineConstants>
+    <DefineConstants>TRACE,DEBUG,EASYTEST</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
@@ -86,7 +82,6 @@
     </Reference>
     <Reference Include="DevExpress.ExpressApp.Web.v21.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Persistent.Base.v21.2">
       <SpecificVersion>False</SpecificVersion>
@@ -96,22 +91,18 @@
     </Reference>
     <Reference Include="DevExpress.Data.Desktop.v21.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v21.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Web.ASPxThemes.v21.2">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.Web.ASPxGantt.v21.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Web.ASPxTreeList.v21.2">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Docs.v21.2">
       <SpecificVersion>False</SpecificVersion>
@@ -164,15 +155,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
-    <Import Include="System.Web" />
-    <Import Include="System" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
@@ -207,7 +189,7 @@
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="WebApplication.resx">
@@ -237,7 +219,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

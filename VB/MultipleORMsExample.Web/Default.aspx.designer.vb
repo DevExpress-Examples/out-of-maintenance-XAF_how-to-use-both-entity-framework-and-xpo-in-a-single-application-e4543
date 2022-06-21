@@ -7,10 +7,7 @@
 '     the code is regenerated.
 ' </auto-generated>
 '------------------------------------------------------------------------------
-
-
-
-Partial Public Class [Default]
+Public Partial Class [Default]
 
     ''' <summary>
     ''' form2 control.

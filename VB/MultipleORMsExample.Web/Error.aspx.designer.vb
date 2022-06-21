@@ -7,10 +7,7 @@
 '     the code is regenerated.
 ' </auto-generated>
 '------------------------------------------------------------------------------
-
-
-
-Partial Public Class ErrorPage
+Public Partial Class ErrorPage
 
     ''' <summary>
     ''' Head1 control.

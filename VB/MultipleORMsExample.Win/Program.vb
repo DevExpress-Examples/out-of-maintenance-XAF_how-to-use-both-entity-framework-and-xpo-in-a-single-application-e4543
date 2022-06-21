@@ -1,27 +1,22 @@
-Imports System.Configuration
-
+Imports System
+Imports System.Windows.Forms
 Imports DevExpress.ExpressApp
 Imports DevExpress.ExpressApp.Security
-Imports DevExpress.ExpressApp.Win
-Imports DevExpress.Persistent.Base
-Imports DevExpress.Persistent.BaseImpl
 
 Namespace MultipleORMsExample.Win
-    Friend NotInheritable Class Program
 
-        Private Sub New()
-        End Sub
+    Friend Module Program
 
         ''' <summary>
         ''' The main entry point for the application.
         ''' </summary>
-        <STAThread> _
-        Shared Sub Main()
-                        DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.v20_1
-Application.EnableVisualStyles()
+        <STAThread>
+        Sub Main()
+            FrameworkSettings.DefaultSettingsCompatibilityMode = FrameworkSettingsCompatibilityMode.v20_1
+            Call Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
             EditModelPermission.AlwaysGranted = System.Diagnostics.Debugger.IsAttached
-            Dim winApplication As New MultipleORMsExampleWindowsFormsApplication()
+            Dim winApplication As MultipleORMsExampleWindowsFormsApplication = New MultipleORMsExampleWindowsFormsApplication()
             Try
                 winApplication.Setup()
                 winApplication.Start()
@@ -29,5 +24,5 @@ Application.EnableVisualStyles()
                 winApplication.HandleException(e)
             End Try
         End Sub
-    End Class
+    End Module
 End Namespace
