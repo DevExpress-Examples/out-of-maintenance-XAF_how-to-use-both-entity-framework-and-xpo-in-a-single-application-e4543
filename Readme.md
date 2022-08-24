@@ -21,7 +21,7 @@ Microsoft has moved EF 6 into maintenance mode, and as such, EF 6 will not mirro
 <p><img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-use-both-entity-framework-and-xpo-in-a-single-application-e4543/21.2.8+/media/6316e026-5868-492b-9687-c12ad1d08118.png"><br />
 <strong>See also:</strong> <br />
 <a href="https://www.devexpress.com/Support/Center/p/E1150">How to prevent altering the legacy database schema when creating an XAF application</a><u><br />
-</u><a href="https://www.devexpress.com/Support/Center/p/E4896">How to implement XPO data models connected to different databases within a single application</a></p>
+</u><a href="https://supportcenter.devexpress.com/ticket/details/e4896/how-to-connect-different-xpo-data-models-to-several-databases-within-a-single-application">How to implement XPO data models connected to different databases within a single application</a></p>
 
 <br/>
 
